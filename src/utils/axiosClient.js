@@ -3,7 +3,7 @@ import { KEY_ACCESS_TOKEN, getItem } from "./localStorageManager";
 
 import toast from "react-hot-toast";
 
-const baseURL = "https://todo-app-0rc9.onrender.com";
+const baseURL = "https://todo-app-backend-6nn3.onrender.com";
 
 export const axiosClient = axios.create({
   baseURL,
