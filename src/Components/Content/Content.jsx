@@ -24,7 +24,7 @@ const Content = () => {
 
     const todos = useSelector(store => store.todoReducer.todos);
     useEffect(() => {
-      const filtered = todos?.filter(todo => todo.status === buttonVal);
+      const filtered = todos?.filter(todo => todo?.status === buttonVal);
       setShow(filtered);
   
   },[todos])
