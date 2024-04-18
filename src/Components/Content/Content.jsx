@@ -67,7 +67,7 @@ const Content = () => {
 
     return (
         <div className="content-container">
-            <h1>Todo Application</h1>
+            <h1>Todos</h1>
             <div className="todo-box">
                 <input className="input-box" type="date" value={date} onChange={handleDateChange} />
                 <form onSubmit={handleSubmit}>
