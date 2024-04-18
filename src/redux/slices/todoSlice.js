@@ -75,19 +75,19 @@ const todoSlice = createSlice({
       .addCase(deleteTodo.fulfilled, (state, action) => {
         const { todoId } = action.payload;
 
-        const index = state.todos?.findIndex((todo) => todo._id === todoId);
+        const index = state.todos?.findIndex((todo) => todo?._id === todoId);
         state.todos?.splice(index, 1);
       })
       .addCase(markComplete.fulfilled, (state, action) => {
         const { todoId } = action.payload;
 
-        const index = state.todos?.findIndex((todo) => todo._id === todoId);
+        const index = state.todos?.findIndex((todo) => todo?._id === todoId);
         state.todos[index].status = "Completed";
       })
       .addCase(todoUpdate.fulfilled, (state, action) => {
         const { todoId, title, description } = action.payload;
 
-        const index = state.todos?.findIndex((todo) => todo._id === todoId);
+        const index = state.todos?.findIndex((todo) => todo?._id === todoId);
         if (title) state.todos[index].title = title;
 
         if (description) state.todos[index].description = description;
